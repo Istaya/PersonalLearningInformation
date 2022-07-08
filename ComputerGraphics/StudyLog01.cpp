@@ -136,3 +136,4 @@
         a.dot(b) == a.transpose * b;
         a.cross(b) = A * b;
     }
+*/
