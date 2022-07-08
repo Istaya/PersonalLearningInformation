@@ -66,8 +66,8 @@
              Yz,
              Zz;
         X.cross(Y) == Yx * Zy - Yy * Zx;
-                 Zx * Xy - Xx * Zy;
-                 Xx * Yy - Yx * Xy;
+                      Zx * Xy - Xx * Zy;
+                      Xx * Yy - Yx * Xy;
         Eigen::MatrixXf A(3, 3), b(3, 1);
         A << 0, -Zx, Yx,
              Zx, 0, -Xx,
@@ -76,4 +76,6 @@
              Yy,
              Zy;
         X.cross(Y) == A * b;
+
+        #Orthonormal
     }
