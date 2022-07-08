@@ -109,5 +109,30 @@
         (A * B) * C = A * (B * C);
         A * (B + C) = A * B + A * C;
         (A + B) * C = A * C + B * C;
+        Eigen::Matrix2f i, m;
+        i << -1, 0,
+             0, 1;
+        m << x,
+             y;
+        n << -x;
+             y;
+        n == i * m;
 
+        #Transpose(转置)
+        Eigen::MatrixXf A, B;
+        A << 1, 2,
+             3, 4,
+             5, 6;
+        B << 1, 3, 5,
+             2, 4, 6;
+        A.transpose == B;
+        (A * B).transpose == B.transpose * A.transpose;
+        //I的概念：从左上到右下对角线为1其他位置为0的矩阵；
+        A * A.inverse == A.inverse * A == I;
+        (A * B).inverse == B.inverse * A.inverse;
+
+        #Vector Multiplication(矢量乘法)
+        Eigen::MatrixXf a, b, A;
+        a.dot(b) == a.transpose * b;
+        a.cross(b) = A * b;
     }
